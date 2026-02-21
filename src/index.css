@@ -1,0 +1,498 @@
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.marquee div {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-up 10s linear infinite;
+}
+@keyframes scroll-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+/* navbar */
+.links {
+  text-decoration: none;
+  color: white;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Show dropdown on hover */
+.nav-item.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+.nav-item.dropdown > .dropdown-menu {
+  margin-top: 35px;
+}
+
+/* Nested submenu */
+.dropdown-submenu {
+  position: relative;
+  margin-top: 0;
+}
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+/* Show nested submenu on hover */
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Remove default caret/arrow */
+.no-caret::after {
+  display: none !important;
+}
+
+.nav-link:hover {
+  /* text-decoration: underline; */
+  font-size: large;
+  font-weight: bold;
+}
+.dropdown-item:hover {
+  background-color: gainsboro;
+  font-size: large;
+}
+/* li {
+  text-decoration: none;
+  list-style: none;
+} */
+.navigation-bar {
+  height: 100px;
+}
+
+/* .nav-bar-second:hover {
+  background: whitesmoke; */
+
+/* } */
+.navbar-links {
+  color: white;
+}
+.navbar-links:hover {
+  background-color: whitesmoke;
+  color: black;
+}
+
+.navbar-links:focus {
+  background-color: whitesmoke;
+  color: black;
+}
+.navbarmain {
+  position: fixed;
+  width: 100%;
+  transition: all 0.2s ease;
+  z-index: 1000;
+}
+.navbarmain.scrolled {
+  background-color: whitesmoke;
+  color: black;
+  top: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* 
+.bx {
+  color: inherit;
+}
+
+.icons svg {
+  color: inherit;
+}
+ */
+/* video toggle button */
+.video-container {
+  width: 100%;
+  height: 100%; /*adjust as needed */
+  overflow: hidden;
+  position: relative;
+}
+
+.speaker-btn {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  position: absolute;
+  /* padding: 8px 12px; */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.speaker-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+/* styling items */
+.itemss {
+  border: none;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.itemss:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.color-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.color-dot:hover {
+  transform: scale(1.2);
+  border-color: #000;
+}
+
+/* product image */
+.pics {
+  border-radius: 4px;
+  max-height: 220px;
+  object-fit: cover;
+}
+
+/* discount badge */
+.discount {
+  background-color: #000;
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  font-size: 0.75rem;
+  padding: 5px 8px;
+}
+
+/* label */
+.label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  min-height: 40px; /* keeps height consistent */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* price styling */
+.price .current-price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.price .original-price {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* ratings */
+.ratings {
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+  color: #ff9800; /* orange stars */
+}
+
+/* add button */
+.add-button {
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.navrati-button {
+  background: #000;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 30px;
+
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.navrati-but {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navrati-button:hover {
+  background: #ff4081;
+}
+
+.add-button:hover {
+  background: #ff4081;
+}
+
+.line {
+  background-color: grey;
+  /* margin-top: 30px; */
+  margin-bottom: 30px;
+  width: 100%;
+  height: 1px;
+}
+
+/* admin styles */
+.admin-layout {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #ccc;
+}
+
+.admin-sidebar {
+  width: 250px;
+  background: #ff4081;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.admin-sidebar a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 8px 0;
+  transition: 0.3s;
+}
+
+.admin-sidebar a:hover {
+  color: #ccc;
+  padding-left: 10px;
+}
+
+.form-control {
+  width: 700px;
+}
+
+.product-head-comp {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+/* admin css */
+
+.admin-login-wrapper {
+  background: linear-gradient(135deg, #141e30, #243b55);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.login-card {
+  background: #fff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  transition: all 0.3s ease;
+}
+
+.login-card:hover {
+  transform: translateY(-5px);
+}
+
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgba(33, 37, 41, 0.25);
+  border-color: #212529;
+}
+
+.btn-dark {
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.alert {
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+/* Subtle fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+  .login-card {
+    margin: 0 20px;
+    padding: 2rem 1.5rem;
+  }
+
+  .fw-bold {
+    font-size: 1.4rem;
+  }
+}
+
+/* product component */
+
+/* Custom styles for the products table */
+.table-responsive {
+  border-radius: 0.375rem;
+}
+
+.card {
+  border: none;
+}
+
+.navrati-button {
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+}
+
+.navrati-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.font-1 {
+  font-weight: 500;
+}
+
+.font-2 {
+  font-weight: 600;
+}
+
+.font-3 {
+  font-weight: 700;
+}
+
+/* Ensure table rows are properly aligned */
+.table > tbody > tr > td {
+  vertical-align: middle;
+}
+
+/* Badge styling */
+.badge {
+  font-size: 0.75em;
+}
+
+.font-1 {
+  font-family: 'Roboto', sans-serif;
+}
+
+.font-2 {
+  font-family: 'Dancing Script', cursive;
+}
+
+.font-3 {
+  font-family: 'SUSE Mono', sans-serif;
+}
+.font-4 {
+  font-family: 'Libre Bodoni', serif;
+}
+
+/* Product Details Styles */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.img-thumbnail:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.card {
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+/* Badge enhancements */
+.badge {
+  font-size: 0.75em;
+  padding: 0.5em 0.75em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .btn-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .btn-group .btn {
+    border-radius: 0.375rem !important;
+  }
+}
+
+/* Product Details Styles */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.img-thumbnail:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.card {
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+/* Badge enhancements */
+.badge {
+  font-size: 0.75em;
+  padding: 0.5em 0.75em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .btn-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .btn-group .btn {
+    border-radius: 0.375rem !important;
+  }
+}
